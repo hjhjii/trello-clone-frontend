@@ -20,6 +20,7 @@ body {
 
 .ToDoCard {
   width: 300px;
+  height: fit-content;
   background-color: #EBECF0;
   border-radius: 3px;
 }
@@ -61,6 +62,11 @@ body {
   border-radius: 3px;
   word-wrap: break-word;
   text-align: start;
+}
+
+textarea[class="Item"] {
+  resize: none;
+  height: 5em;
 }
 
 .Item-button {
