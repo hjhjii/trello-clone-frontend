@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 * {
   box-sizing: border-box;
   border: none;
@@ -8,8 +12,10 @@
 }
 
 .container-card {
+  overflow-x: auto;
   display: flex;
   gap: 10px;
+  padding: 10px;
 }
 
 .ToDoCard {
