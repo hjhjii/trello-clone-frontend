@@ -1,6 +1,8 @@
 import Item from "./Item"
+import { useState } from 'react'
 
 function ToDoCard(props) {
+    const [isAddActionActive, setAddActionActive] = useState(false)
     return <>
         <div className="ToDoCard">
             <div className="ToDoCard-header">
@@ -10,8 +12,9 @@ function ToDoCard(props) {
                 <Item text={"texttexttexttexttexttexttexttexttexttexttexttexttexttexttext"} />
                 <div>
                     <div className="container-add-item">
-                        <button className="Item Item-button add-item-button">Add a item</button>
-                        <button className="Item Item-button">X</button>
+
+                        {/* <button className="Item Item-button">X</button> */}
+                        {isAddActionActive ? <textarea className="Item"></textarea> : <button className="Item Item-button add-item-button" onClick={() => setAddActionActive(!isAddActionActive)}>Add a item</button>}
                     </div>
                 </div>
             </div>
